@@ -1,8 +1,6 @@
 import React from "react";
 import { Controller } from "react-hook-form";
 import { cn } from "@/lib/utils";
-import { Input } from "@/components/ui/Input";
-import { Label } from "@/components/ui/label";
 
 const Step2 = ({ control, errors }) => {
   return (
@@ -10,19 +8,19 @@ const Step2 = ({ control, errors }) => {
       <div>
         {/* Address 1 Input Start */}
         <div className="mb-4">
-          <Label className="mb-2 block text-sm font-medium text-gray-700 dark:text-white">
+          <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-white">
             Address Line 1
-          </Label>
+          </label>
           <Controller
             name="address1"
             control={control}
             defaultValue=""
             rules={{ required: "Address Line 1 is required" }}
             render={({ field }) => (
-              <Input
+              <input
                 {...field}
                 className={cn(
-                  " mt-1 w-full shadow-sm  sm:text-sm",
+                  "border rounded ps-2 pe-2 pt-3 pb-3 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-950 dark:border-0",
                   errors.address1 && "border-red-500"
                 )}
               />
@@ -36,17 +34,17 @@ const Step2 = ({ control, errors }) => {
 
         {/* Address 2 Input Start */}
         <div className="mb-4">
-          <Label className="mb-2 block text-sm font-medium text-gray-700 dark:text-white">
+          <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-white">
             Address Line 2
-          </Label>
+          </label>
           <Controller
             name="address2"
             control={control}
             defaultValue=""
             render={({ field }) => (
-              <Input
+              <input
                 {...field}
-                className=" mt-1 w-full shadow-sm  sm:text-sm"
+                className="border rounded ps-2 pe-2 pt-3 pb-3 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-950 dark:border-0"
               />
             )}
           />
@@ -55,19 +53,19 @@ const Step2 = ({ control, errors }) => {
 
         {/* City Input Start */}
         <div className="mb-4">
-          <Label className="mb-2 block text-sm font-medium text-gray-700 dark:text-white">
+          <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-white">
             City
-          </Label>
+          </label>
           <Controller
             name="city"
             control={control}
             defaultValue=""
             rules={{ required: "City is required" }}
             render={({ field }) => (
-              <Input
+              <input
                 {...field}
                 className={cn(
-                  " mt-1 w-full shadow-sm  sm:text-sm",
+                  "border rounded ps-2 pe-2 pt-3 pb-3 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-950 dark:border-0",
                   errors.city && "border-red-500"
                 )}
               />
@@ -81,9 +79,9 @@ const Step2 = ({ control, errors }) => {
 
         {/* State Input Start */}
         <div className="mb-4">
-          <Label className="mb-2 block text-sm font-medium text-gray-700 dark:text-white">
+          <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-white">
             State
-          </Label>
+          </label>
           <Controller
             name="state"
             control={control}
@@ -112,9 +110,9 @@ const Step2 = ({ control, errors }) => {
 
         {/* Zip Code Input Start */}
         <div className="mb-4">
-          <Label className="m-2 block text-sm font-medium text-gray-700 dark:text-white">
+          <label className="m-2 block text-sm font-medium text-gray-700 dark:text-white">
             Zip Code
-          </Label>
+          </label>
           <Controller
             name="zipCode"
             control={control}
@@ -127,10 +125,10 @@ const Step2 = ({ control, errors }) => {
               },
             }}
             render={({ field }) => (
-              <Input
+              <input
                 {...field}
                 className={cn(
-                  " mt-1 w-full shadow-sm  sm:text-sm",
+                  "border rounded ps-2 pe-2 pt-3 pb-3 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-950 dark:border-0",
                   errors.zipCode && "border-red-500"
                 )}
               />

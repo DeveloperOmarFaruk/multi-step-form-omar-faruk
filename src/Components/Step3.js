@@ -1,8 +1,6 @@
 import React from "react";
 import { Controller } from "react-hook-form";
 import { cn } from "@/lib/utils";
-import { Input } from "@/components/ui/Input";
-import { Label } from "@/components/ui/label";
 
 const Step3 = ({ control, errors }) => {
   return (
@@ -10,19 +8,19 @@ const Step3 = ({ control, errors }) => {
       <div>
         {/* Username Input Start */}
         <div className="mb-4">
-          <Label className="mb-2 block text-sm font-medium text-gray-700 dark:text-white">
+          <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-white">
             Username
-          </Label>
+          </label>
           <Controller
             name="username"
             control={control}
             defaultValue=""
             rules={{ required: "Username is required" }}
             render={({ field }) => (
-              <Input
+              <input
                 {...field}
                 className={cn(
-                  "mt-1 w-full shadow-sm  sm:text-sm",
+                  "border rounded ps-2 pe-2 pt-3 pb-3 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-950 dark:border-0",
                   errors.username && "border-red-500"
                 )}
               />
@@ -36,20 +34,20 @@ const Step3 = ({ control, errors }) => {
 
         {/* Password Input Start */}
         <div className="mb-4">
-          <Label className="mb-2 block text-sm font-medium text-gray-700 dark:text-white">
+          <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-white">
             Password
-          </Label>
+          </label>
           <Controller
             name="password"
             control={control}
             defaultValue=""
             rules={{ required: "Password is required" }}
             render={({ field }) => (
-              <Input
+              <input
                 {...field}
                 type="password"
                 className={cn(
-                  "mt-1 w-full shadow-sm  sm:text-sm",
+                  "border rounded ps-2 pe-2 pt-3 pb-3 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-950 dark:border-0",
                   errors.password && "border-red-500"
                 )}
               />
@@ -63,9 +61,9 @@ const Step3 = ({ control, errors }) => {
 
         {/* Confirm Password Input Start */}
         <div className="mb-4">
-          <Label className="mb-2 block text-sm font-medium text-gray-700 dark:text-white">
+          <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-white">
             Confirm Password
-          </Label>
+          </label>
           <Controller
             name="confirmPassword"
             control={control}
@@ -76,11 +74,11 @@ const Step3 = ({ control, errors }) => {
                 value === formValues.password || "Passwords do not match",
             }}
             render={({ field }) => (
-              <Input
+              <input
                 {...field}
                 type="password"
                 className={cn(
-                  "mt-1 w-full shadow-sm  sm:text-sm",
+                  "border rounded ps-2 pe-2 pt-3 pb-3 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:bg-gray-950 dark:border-0",
                   errors.confirmPassword && "border-red-500"
                 )}
               />
