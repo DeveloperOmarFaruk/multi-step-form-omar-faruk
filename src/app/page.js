@@ -1,9 +1,10 @@
 "use client";
-import { useState, useEffect } from "react";
+
 import MultiStepForm from "@/Components/MultiStepForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faLightbulb } from "@fortawesome/free-solid-svg-icons";
 import useFunctions from "@/Hooks/useFunctions";
+import "tailwindcss/tailwind.css";
 
 export default function Home() {
   // import from useFunctions file
